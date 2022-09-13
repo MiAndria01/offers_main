@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { MultiStepForm } from "./MultiStepForm";
 import { questions } from "./Questions";
 
-function AnnonceForm({ setOpenModal }) {
+function AnnonceForm() {
     const [index, setIndex] = useState(1);
     const [submitted, setSubmitted] = useState(false);
     const totalPagesCount = questions?.length || 0;
@@ -37,14 +37,17 @@ function AnnonceForm({ setOpenModal }) {
       setIndex(1);
       setSubmitted(false);
     }
+    const close=()=> {
+
+      document.getElementById('annonceform').style.display='none';    
+  
+  }
   return (
-    <div className="modalBackground">
+    <div className="modalBackground" id="annonceform">
       <div className="modalContainer">
         <div className="titleCloseBtn">
           <button
-            onClick={() => {
-              setOpenModal(false);
-            }}
+            onClick={close}
           >
             X
           </button>

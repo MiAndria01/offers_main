@@ -1,13 +1,17 @@
 import React, {useState} from 'react'
 import Button from 'react-bootstrap/esm/Button'
-import AnnonceForm from "./AnnonceForm"
 
 function Offerfilter () {
-  
-    const [modalOpen, setModalOpen] = useState(false);
+    
+    const afficherInscription=()=> {
+
+        document.getElementById('annonceform').style.display='flex';    
+    
+    }
+
     return (
         <div class="col-lg-11">
-              
+        
         {/*Offers Sorting*/}
         <div class="offers_sorting_container">
             <ul class="offers_sorting">
@@ -38,13 +42,11 @@ function Offerfilter () {
                         <li class="filter_btn" data-filter=".rating_5"><span>5</span></li>
                     </ul>
                 </li>
-                <Button className="button pub_button" onClick={() => {
-                    setModalOpen(true);
-                  }}>Publier une annonce</Button>
+                <Button className="button pub_button" onClick={afficherInscription} >Publier une annonce</Button>
                   
             </ul>
         </div>
-        {modalOpen ? <AnnonceForm setOpenModal={setModalOpen}/> : undefined}
+        
     </div>
     )  
 }

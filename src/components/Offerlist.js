@@ -27,7 +27,7 @@ export default class offerlist extends Component {
 
             {/*Offers Item */}
             {this.state.offers.map((offer) => (
-                <Offeritem key={offer.idCovoiturage} offer={offer} compte={offer.compte} vehicule={offer.vehicule} datecov={Date(offer.dateCovoiturage).toLocaleString()}/>
+                <Offeritem key={offer.idCovoit} offer={offer} compte={offer.covoitureurs} vehicule={offer.vehicule} datecov={Date(offer.dateCovoit).toLocaleString()}/>
             ))}            
 
         

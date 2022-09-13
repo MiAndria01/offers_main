@@ -10,7 +10,7 @@ const Offeritem = ({offer,compte,vehicule}) => {
     const avis = "26 avis"
     const {nom, prenom}=compte;
     const {modele, marque, noteVehicule} = vehicule;
-    const {nbPassage, tarif, lieuDepart, lieuArriver, heureDepart,dateCovoiturage} = offer;
+    const {nbPassage, tarif, lieuDepart, lieuArriver, heureDepart,dateCovoit} = offer;
     return (
         <div className="col-lg-12">
         <div className="offers_grid">
@@ -39,7 +39,7 @@ const Offeritem = ({offer,compte,vehicule}) => {
                             
                             <div className="offer_reviews_content">
                                 <div className="offer_reviews_title"><Moment format="Do MMMM YYYY">
-                                {dateCovoiturage}</Moment></div> 
+                                {dateCovoit}</Moment></div> 
                                 
                                 <div className="offer_reviews_subtitle">{heureDepart}</div>                              
                             </div>     

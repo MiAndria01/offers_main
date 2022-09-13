@@ -1,11 +1,15 @@
+#annonceform{
+display:none;
+}
 .modalBackground {
     width: 100vw;
     height: 100vh;
-    background-color: rgba(200, 200, 200);
+    background-color: rgba(0, 0, 0, 0.50);
     position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
   }
   
   .modalContainer {
@@ -15,6 +19,10 @@
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
+    display: block;
+    
+
+    
     flex-direction: column;
     padding: 25px;
   }
@@ -23,11 +31,13 @@
     display: inline-block;
     text-align: center;
     margin-top: 10px;
+    
   }
   
   .titleCloseBtn {
     display: flex;
     justify-content: flex-end;
+    
   }
   
   .titleCloseBtn button {
